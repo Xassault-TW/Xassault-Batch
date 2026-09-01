@@ -40,7 +40,9 @@ h1,h2,h3{font-family:'Noto Serif TC',"PingFang TC",serif;line-height:1.3;text-wr
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 section{padding:60px 0;border-top:1px solid var(--line)}
 .sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:30px}
-.eyebrow{font-size:12px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;font-weight:500}
+.eyebrow{align-self:flex-start;display:inline-flex;align-items:center;
+  font-size:13px;letter-spacing:.14em;font-weight:700;color:var(--gold);text-transform:uppercase;
+  background:var(--chip-bg);border:1px solid var(--gold);border-radius:99px;padding:5px 14px}
 .sec-head h2{font-size:26px}
 .sec-head p{margin:0;color:var(--ink2)}
 /* hero */
@@ -134,7 +136,7 @@ footer a{color:var(--ink2)}
     <div class="eyebrow">XAUUSD · 黃金日內自動交易 · 分批版</div>
     <h1>X<span>assault</span><span class="ver">分批版</span></h1>
     <p class="thesis">同一套方法，一次建倉拆成三張單。</p>
-    <p class="sub">進場規則與單筆版完全相同——差別在出場：每次進場同時建立三張單，一張先落袋把成本鎖住、一張吃當天的行情波動、一張讓利潤盡量奔跑。犧牲一點爆發力，換一條更平滑的資金曲線。</p>
+    <p class="sub">進場規則與單筆版完全相同——單筆版一次進場只做一張單、抱到出場為止；分批版則同時建立三張：一張先落袋把成本鎖住、一張吃當天的行情波動、一張讓利潤盡量奔跑。犧牲一點爆發力，換一條更平滑的資金曲線。</p>
     <div class="badges">
       <span class="badge">不用馬丁格爾</span><span class="badge">不用網格</span><span class="badge">不加碼攤平</span><span class="badge">每一張都有硬停損</span>
     </div>
@@ -144,6 +146,32 @@ footer a{color:var(--ink2)}
     </div>
   </div>
 </header>
+
+<section id="scenes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">你是哪一種</div>
+      <h2>三種人，同一個問題</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>忙碌的上班族</h3>
+        <p>黃金最會走的時段，多半在台灣的深夜到凌晨。手動做，等於拿睡眠換交易；不做，等於看得到吃不到。</p>
+        <p class="a"><b>系統的回應：</b>程式 24 小時盯著規則該盯的位置。你負責生活，它負責不睡覺。</p>
+      </div>
+      <div class="card">
+        <h3>手不聽話的交易者</h3>
+        <p>計畫好的停損，到價卻捨不得按；想等回調，看它一直走就忍不住追。每一條你違反過的紀律，你其實都懂。</p>
+        <p class="a"><b>系統的回應：</b>它做不到違反。追價、凹單、不掛停損——這些錯誤在程式裡根本不存在。</p>
+      </div>
+      <div class="card">
+        <h3>熬不過波動的人</h3>
+        <p>不是不相信方法，是帳戶連續幾天縮水就開始懷疑，然後在最不該停的時候把程式關掉。</p>
+        <p class="a"><b>系統的回應：</b>把一次進場拆成三張分批出場，第一張先落袋鎖住成本，讓多數交易先站上不敗的位置。2026 回測 133 次建倉，最大回撤佔本金 13.1%、單次最壞虧 91.44 美元（約 2.6%）。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="split">
   <div class="wrap">
@@ -273,7 +301,7 @@ footer a{color:var(--ink2)}
     <div class="faq">
       <div class="qa">
         <h3>分批版跟單筆版，我該選哪個？</h3>
-        <p>資金 1,000 美元左右、想用最小成本起步——選單筆版。資金 3,500 美元以上、在乎資金曲線平不平滑——選分批版：同期回測最大回撤佔本金 13.1%（單筆版 22.0%），虧損月虧得更淺。兩版的進場規則是同一套，差別只在出場方式與手數。</p>
+        <p>兩版用的是同一套進場與停損規則，差別只在出場方式與手數。<b>單筆版</b>一次進場只做一張 0.01 手的單、抱到出場為止，資金 1,000 美元左右就能起步，但資金曲線比較顛簸——同期回測最大回撤佔本金 22.0%。<b>分批版</b>把每次進場拆成三張、合計 0.04 手，分三段落袋，同期最大回撤佔本金 13.1%、虧損月更淺，建議資金 3,500 美元以上。想用最小成本試水溫，選單筆版；在乎過程好不好熬，選分批版。</p>
       </div>
       <div class="qa">
         <h3>需要多少資金？</h3>
